@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Knowledge of Being a Scuba Diver</title>
+</head>
+<!--NAVBAR-->
+<body>
+    <header class="header">
+        <a href="#" class="logo">AquaVerse</a>
+        <img class="menu" src="menu (3).png" width="50px" height="50px" onclick="toggleMenu()" id="menuB">
+        <nav class="navbar" id="navbar">
+            <a id="sectionLink1" href="#home-container">Home</a>
+            <a id="sectionLink2" href="#about_section">About</a>
+            <a id="sectionLink3" href="#my_story_section">My Story</a>
+            <a id="sectionLink4" href="#diving-info">Diving Info</a>
+            <!--<a href="#">Quiz Game</a>-->
+        </nav>
+    </header>
+<!--HOME - SECTION-->
+    <div id="home-container" class="home-container">
+        <div class="container">
+            <div class="home-text">Planning to Start Diving?</div>
+            <button class="ReadInfo button_blue" onclick="alert('This is the read info content!')">Read Info</button>
+        </div>
+    </div>
+
+<!--ABOUT - SECTION-->
+    <section class="about_section" id="about_section">
+        <div class="heading">
+            <h2>About Us</h2>
+        </div>
+        <div class="about_container">
+            <div class="about_content">
+                <h3> Welcome To Aquaverse!</h3>
+                <p> Our mission is to provide diving information for people who wants to know more about diving world.
+                    Encouraging to explore by our inspiring stories and simple information.</p>
+                <p class="inspire"> Want to read an inspiring story?
+                <p>
+                    <button class="click-read button_blue" onclick="alert('This is the read info content!')"> Click to Read </button>
+            </div>
+            <div class="about-jpg">
+                <img class="about" src="about2.jpg">
+            </div>
+        </div>
+    </section>
+
+<!--MY STORY - SECTION-->
+    <section class="my_story_section" id="my_story_section">
+        <h2 class="title_story">My Story</h2>
+        <div class="slideshow-container">
+            <div class="slider">
+                <div class="slide-content">
+                    <img src="Slide_Image1.jpg" alt="Slide_1">
+                </div>  
+                    <!--div class="text"></div>-->
+
+                <div class="slide-content">
+                    <img src="Slide_Image2.PNG" alt="Slide_2">
+                </div>
+                    <!--<div class="text"></div>-->
+
+                <div class="slide-content">
+                    <img src="Slide_Image3.jpg"  alt="Slide_3">
+                </div>
+
+                    <!--<div class="text"></div>-->
+            </div>
+        <button class="slide-button prev-button" onclick="prevSlide()"><</button>
+        <button class="slide-button next-button" onclick="nextSlide()">></button>
+        </div>
+        <div class="my_story_content">
+            <p class="story_text">
+
+                Hello, my name is Iashlayne Kane Medina.
+                I’m an advanced scuba diver who started diving at the age of 18. 
+                I never knew it would become my favorite hobby.<br><br>
+
+                In the past, I used to be afraid of water. 
+                I found the idea of being in the deep sea terrifying. 
+                However, when I overcame my fears, I realized that being in the ocean was like an escape from reality. 
+                Seeing the sea creatures dive with me was such a relaxing experience. It felt like I was one of them.<br><br>
+
+                I encourage you to become a diver not only for fun but also to help save the sea world.
+                Let’s explore the depths and have a good time.
+
+            </p>
+        </div>
+    </section>
+<!--DIVING INFO - SECTION -->
+    <section class="diving-info" id="diving-info">
+        <div class="diving-info-container">
+            <h2 class="diving_title"> What is Scuba Diving? </h2>
+            <p class="diving_text">
+                Self Contained Underwater Breathing Apparatus is referred to as SCUBA.
+                People can explore the undersea world without holding their breath by participating in scuba diving.
+                One of the closest experiences to Zero G is undoubtedly floating weightlessly in mid-water.
+
+            </p>
+            <h2 class="diving_title"> Skills of Diver Should Know </h2>
+            <p class="diving_text">
+                Beginning with online lessons and a knowledge test, the "Open Water" 
+                learn-to-scuba course offered by this PADI organization covers all the
+                fundamentals you'll need to know to become a safe novice diver.
+                You must be able to swim without a mask for a brief period of time in order to do some of these talents.
+                Try snorkeling without a mask on if you'd want to get some practice before enrolling in a scuba class. 
+                Speak with your diving instructor; they ought to be able to assist you in achieving each of these objectives.
+            </p>
+
+            <p class="diving_text">
+                You always have to dive with your buddy, if you get lost try to find your buddy. 
+                If you can’t find him, you need to ascend accordingly to your depth.
+            </p>
+            <h2 class="diving_title"> Standard Beginner's Equipment Lineup </h2>
+            <ul>
+               <li> • Mask and snorkel </li>
+               <li> • Weights and buoyancy control device (BCD) </li>
+               <li> • A regulator with a first, second stage, and octopus </li>
+               <li> • Depth gauge </li>
+               <li> • Submersible Pressure gauge (SPG) </li>
+               <li> • Scuba diving tank </li>
+               <li> • Diving Fins </li>
+            </ul>
+            
+
+        </div>
+
+    </section>
+<!--QUIZ GAME - SECTION-->
+    <!--
+        <section class="quiz-game">
+        <h2 class="quiz_title"> Quiz Game </h2>
+        <h4 class="quiz_subtitle"> Want to test your diving knowledge? </h4>
+        <button class="quiz_button" onclick="startQuiz()"> Take Quiz </button>
+        <div class="quiz" id="quiz"> </div>
+    </section>
+    -->
+
+<!--FOOTER SECTION-->
+    <footer>
+        <p> &copy; 2024 Diverse. All rights reserved</p>
+
+    </footer>
+
+
+<!--JAVASCRIPT-->
+    <script>
+     // Navbar to show the nav links when clicked it will link to the section for HOME,ABOUT US, MY STORY,DIVING INFO
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show");
+        }
+
+      // Navbar to close when the link is click it will close automatically to hide the navbar
+        var els = document.querySelectorAll('a');
+
+        for( var i=els.length; i--; ) {
+        els[i].addEventListener( 'click', function(){
+            
+            document.getElementById('navbar').classList.toggle("show");
+        }
+        );
+        }
+     // This if for the image slider to create the sliding effect
+        let prevIndex = 0;
+
+        function showSlides(index) {
+            const slider = document.querySelector('.slider');
+            const slideWidth = document.querySelector('.slide-content').offsetWidth;
+            const newPosition = -index * slideWidth;
+            slider.style.transform = `translateX(${newPosition}px)`;
+            prevIndex = index;
+        }
+    // This is for the button next slide 
+        function nextSlide(){
+            prevIndex = (prevIndex + 1) % 3;
+            showSlides(prevIndex);
+        }
+    // This is for the button previous slide 
+        function prevSlide(){
+            prevIndex = (prevIndex - 1 + 3) % 3;
+            showSlides(prevIndex);
+        }
+    </script>
+
+</body>
+
+</html>
